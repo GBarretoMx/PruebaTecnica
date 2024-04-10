@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <observer name="chupaprecios_log_data_order"
+                  instance="Chupaprecios\NewSection\Observer\LogDataOrder" />
+    </event>
+    <event name="catalog_product_get_final_price">
+        <observer name="chupaprecios_conversionFactor_final_price_observer"
+                  instance="Chupaprecios\NewSection\Observer\FinalPriceObserver"/>
+    </event>
+</config>
